@@ -17,7 +17,7 @@ const AddNewProduct = () => {
   });
 
   const handleChange = (e) => {
-    const { name, value, files } = e.target;
+    const { name, value } = e.target;
       setFormData({ ...formData, [name]: value });
   };
 

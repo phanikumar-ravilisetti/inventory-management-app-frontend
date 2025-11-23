@@ -1,25 +1,11 @@
 import { useNavigate } from "react-router-dom";
 
 import "./Header.css";
-import axios from "axios";
 
 import Home from "../Home/Home";
 
 const Header = () => {
     const navigate = useNavigate();
-    const onDelete = () => {
-        axios.delete('https://inventory-management-app-backend-w3ca.onrender.com/api/products/all')  
-        .then(response => {
-            console.log('All products deleted successfully:', response.data);
-            alert('All products deleted successfully!');
-            navigate('/');
-        })
-        .catch(error => {
-            console.error('There was an error deleting the products!', error);
-            alert('Failed to delete products. Please try again.');
-        }); 
-    };
-
 return (<>
         <h1 className="home-title">Inventory Management System</h1>
         <header className="header-container">

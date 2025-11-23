@@ -23,7 +23,7 @@ const AddNewProduct = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-     axios.post('http://localhost:3000/api/product/new', formData)
+     axios.post('https://inventory-management-app-backend-w3ca.onrender.com/api/product/new', formData)
       .then(response => {
         console.log('Product added successfully:', response.data);
         alert('Product added successfully!');

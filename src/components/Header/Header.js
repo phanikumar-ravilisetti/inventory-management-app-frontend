@@ -8,7 +8,7 @@ import Home from "../Home/Home";
 const Header = () => {
     const navigate = useNavigate();
     const onDelete = () => {
-        axios.delete('http://localhost:3000/api/products/all')  
+        axios.delete('https://inventory-management-app-backend-w3ca.onrender.com/api/products/all')  
         .then(response => {
             console.log('All products deleted successfully:', response.data);
             alert('All products deleted successfully!');
@@ -45,7 +45,6 @@ return (<>
             <div className="right-section">
             <button className="import-btn">Import</button>
             <button className="export-btn">Export</button>
-            <button className="export-btn" type="button" onClick={onDelete}>Delete All</button>
             </div>
         </header>
         <Home />

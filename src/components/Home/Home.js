@@ -7,7 +7,7 @@ const Home = () => {
     const [editingRowId, setEditingRowId] = useState(null);
 const fetchProducts = async () => {   
     try {
-      const response = await axios.get("http://localhost:3000/api/products");
+      const response = await axios.get("https://inventory-management-app-backend-w3ca.onrender.com/api/products");
       setProducts(response.data);
     } catch (error) {
       console.error("Error fetching products:", error);
